@@ -52,7 +52,7 @@ public class AdServiceImpl implements AdService {
         return adRepository.findByAgent(agent);
     }
     @Override
-    public Ad updateAd(Long adId, Ad updatedAd) {
+    public Ad updateAd(Long adId, Ad updatedAd){
         Ad existingAd = adRepository.findById(adId)
                 .orElseThrow(() -> new AdNotFoundException("Ad not found with ID: " + adId));
 
